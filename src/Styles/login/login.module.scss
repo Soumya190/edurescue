@@ -1,0 +1,196 @@
+.mainContainer {
+    display: grid;
+    font-family: 'poppins', sans-serif;
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 2vw;
+        border-bottom: 2px solid #ccc;
+        height: 7vw;
+
+        .logoSection {
+            display: flex;
+            // justify-content: space-evenly;
+            gap: 3vw;
+
+            div {
+                display: grid;
+
+                h1 {
+                    color: rgb(14, 10, 96);
+                    font-size: 1.8vw;
+                    font-weight: bold;
+                }
+
+                p {
+                    font-size: 1vw;
+                }
+            }
+        }
+    }
+
+    .mainSection {
+        display: flex;
+        padding: 5vw;
+        justify-content: center;
+        gap: 10vw;
+
+        .leftSection {
+            display: grid;
+            gap: 1vw;
+
+            h1 {
+                color: rgb(14, 10, 96);
+                font-size: 2.7vw;
+
+                span {
+                    color: orange;
+                    text-wrap: wrap;
+                }
+            }
+
+            p {
+                flex-wrap: wrap;
+                overflow-wrap: break-word;
+                width: 400px;
+                font-size:1.3vw;
+                color: rgb(121, 119, 119);
+            }
+
+            .practices {
+                display: grid;
+                gap:2vw;
+
+                .practiceBox1{
+                    display: flex;
+                    gap: 2vw;
+
+                    .practiceBox1Content1,.practiceBox1Content2 {
+                        display: grid;
+                        padding: 1vw;
+                        height: 6vw;
+                        width: 12vw;
+                        background-color:rgb(236, 235, 250) ;
+                        flex-wrap: wrap;
+
+                        h3{
+                            overflow-wrap: break-word;
+                            flex-wrap: wrap;
+                            text-wrap: wrap;
+                            font-size: 1vw;
+                        }
+
+                        p{
+                            font-size: 0.9vw;
+                        }
+                    }
+                }
+
+                .practiceBox2{
+                    display: flex;
+                    gap: 2vw;
+
+                    .practiceBox2Content1,.practiceBox2Content2 {
+                        display: grid;
+                        padding: 1vw;
+                        height: 6vw;
+                        width: 12vw;
+                        // background-color: gainsboro;
+                        background-color:rgb(236, 235, 250) ;
+                        flex-wrap: wrap;
+
+                        h3{
+                            overflow-wrap: break-word;
+                            flex-wrap: wrap;
+                            text-wrap: wrap;
+                            font-size: 1vw;
+                        }
+                        p{
+                            font-size: 0.9vw;
+                        }
+                    }
+                }
+            }
+        }
+
+        form{
+            // border:1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 2vw;
+            display: grid;
+            // gap: 2vw;
+            // height: 30vw;
+            width: 30vw;
+
+            h1{
+                text-align: center;
+                font-size: 1.7vw;
+            }
+
+            p{
+                text-align: center;
+                color:rgb(161, 159, 159)
+            }
+
+            div{
+                width: full;
+                display: flex;
+                height: 3vw;
+                justify-content: center;
+                align-items: center;
+                background-color:rgba(227, 228, 230, 0.833) ;
+                gap: 2vw;
+                padding:0vw;
+
+                .student{
+                    height: 2vw;
+                    width: 10vw;
+                    background-color: white;
+                    border-radius: 0.2vw;
+                    cursor: pointer;
+
+                    p{
+                        font-size: 1vw;
+                    }
+                    // text-align: center;
+                }
+
+                .teacher{
+                    height: 2vw;
+                    width: 10vw;
+                    background-color: none;
+                    border-radius: 0.2vw;
+                    cursor: pointer;
+
+                    p{
+                        font-size: 1vw;
+                    }
+                    // text-align: center;
+                }
+            }
+
+            label{
+                font-size: 0.9vw;
+                color: rgb(14, 10, 96);
+            }
+
+            input{
+                padding-left: 1vw;
+                border:0.1vw solid #ece9e9;
+                margin-bottom: 1vw;
+            }
+
+            button{
+                // background-color: ;
+                color: white;
+                padding: 0.5vw;
+                border: none;
+                cursor: pointer;
+                font-size: 1vw;
+                margin-top: 1vw;
+                margin-bottom: 1vw;
+            }
+        }
+    }
+}
