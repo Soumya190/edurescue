@@ -1,9 +1,9 @@
-export default function DashboardLayout({
-    children,
-}) {
-    return (
-        <main>
+"use client"
+
+export default function DashboardLayout({children}){
+    return(
+        <div>
             {children}
-        </main>
-    );
+        </div>
+    )
 }

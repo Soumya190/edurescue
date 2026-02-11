@@ -1,0 +1,125 @@
+.mainSection {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+
+    .homepage {
+        display: grid;
+        // background-image:url('/flood.jpg');
+        // height: 100vh;
+        width: full;
+        // background-size: cover;
+        // background-position: 20% 70%;
+        // opacity: 0.9;
+        // place-content: space-between;
+        // background-image: linear-gradient(to bottom,
+        //         rgba(0, 0, 0, 1) 0%,
+        //         rgba(0, 0, 0, 0) 70%);
+
+        .navbar {
+            display: flex;
+            // justify-content: space-between;
+            width: full;
+            height: full;
+            transition: transform 700ms ease-in-out;
+            // background-image: linear-gradient(to bottom,
+            //         rgba(0, 0, 0, 1) 0%,
+            //         rgba(0, 0, 0, 0) 70%);
+            // background-position: 20% 70%;
+            // background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%);
+
+            .images {
+                position: relative;
+                margin: 0;
+                height: 100vh;
+                width: 100%; 
+                object-fit: cover;
+                overflow: hidden;
+                
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(to bottom,
+                            rgba(0, 0, 0, 1) 0%,
+                            rgba(0, 0, 0, 0) 70%,rgba(0, 0, 0, 1) 100%);
+                    pointer-events: none;
+                }
+
+                img {
+                    display: block;
+                    height: 100vh;
+                    width: 100vw;
+                    object-fit: cover;
+                }
+            }
+
+            div {
+                display: flex;
+                gap: 2vw;
+                margin: 1vw;
+
+                p {
+                    position: absolute;
+                    overflow: visible;
+                    font-weight: bolder;
+                    font-size: 1.2vw;
+                    font-style: 'poppins', sans-serif;
+                    margin: 1vw;
+                    color: #F0F4F8;
+                    cursor: pointer;
+                }
+            }
+
+            .heading {
+                position: absolute;
+                top: 1vw;
+                left: 1vw;
+                display: flex;
+                justify-content: space-between;
+                width: 80vw;
+
+                h1 {
+                    // display: absolute;
+                    font-weight: bolder;
+                    font-size: 2vw;
+                    font-style: 'poppins', sans-serif;
+                    margin: 1vw;
+                    color: #F0F4F8;
+                    // opacity: 0.3;
+                }
+
+                div {
+                    display: flex;
+                    gap: 3vw;
+                    width: 20vw;
+                    position: absolute;
+                    // left:50vw
+
+                    p {
+                        position: relative;
+                        left: 55vw;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .heading {
+            position: grid;
+            // place-content: center;
+            top: 22vw;
+            left: 30vw;
+            font-size: 2vw;
+            color: #F0F4F8;
+            text-wrap: wrap;
+            line-height: 1.5;
+            position: absolute;
+        }
+    }
+}
