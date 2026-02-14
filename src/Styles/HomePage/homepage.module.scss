@@ -6,28 +6,14 @@
 
     .homepage {
         display: grid;
-        // background-image:url('/flood.jpg');
-        // height: 100vh;
-        width: full;
-        // background-size: cover;
-        // background-position: 20% 70%;
-        // opacity: 0.9;
-        // place-content: space-between;
-        // background-image: linear-gradient(to bottom,
-        //         rgba(0, 0, 0, 1) 0%,
-        //         rgba(0, 0, 0, 0) 70%);
+        width: 100vw;
+        overflow: hidden;
+        height: 100vh;
 
         .navbar {
             display: flex;
-            // justify-content: space-between;
-            width: full;
             height: full;
             transition: transform 700ms ease-in-out;
-            // background-image: linear-gradient(to bottom,
-            //         rgba(0, 0, 0, 1) 0%,
-            //         rgba(0, 0, 0, 0) 70%);
-            // background-position: 20% 70%;
-            // background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%);
 
             .images {
                 position: relative;
@@ -36,7 +22,7 @@
                 // width: 100%; 
                 object-fit: cover;
                 overflow: hidden;
-                
+
 
                 &::after {
                     content: "";
@@ -47,7 +33,7 @@
                     height: 100%;
                     background: linear-gradient(to bottom,
                             rgba(0, 0, 0, 1) 0%,
-                            rgba(0, 0, 0, 0) 70%,rgba(0, 0, 0, 1) 100%);
+                            rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 1) 100%);
                     pointer-events: none;
                 }
 
@@ -123,28 +109,70 @@
         }
     }
 
-    .about{
+    .about {
         height: 100vh;
-        margin:2vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+        width: 100vw;
+        margin-top: 2vw;
 
-        .newsSection{
-            display: flex;
-            gap:2vw;
-            // justify-content: center;
-            // align-items: center;
-            // margin: 1vw;
-            // padding: 2vw;
+
+        h2 {
+            text-align: center;
         }
 
-        .news{
-            height: 10vw;
-            width: 20vw;
+        p {
+            text-align: center;
+        }
+
+        .newsSection {
+            display: flex;
+            gap: 2vw;
+            width: max-content;
+            padding: 2vw;
+        }
+
+        .news {
+            width: 25vw;
+            flex-shrink: 0;
             display: grid;
-            // padding: 2vw;
-            border-radius: 1vw;
-            border-color: black;
-            border-width: 1px;
-            border-style: solid;
+            gap: 1vw;
+            border: 1px solid black;
+            border-radius: 0.5vw;
+            padding-bottom: 2vw;
+
+            animation: slideRight 15s linear infinite;
+
+            div {
+                margin: 0;
+                padding-left: 1vw;
+                padding-right: 1vw;
+            }
+
+            .newsImages {
+                height: 15vw;
+                border-top-left-radius: 0.5vw;
+                border-top-right-radius: 0.5vw;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+        }
+
+        .newsSection:hover .news {
+            animation-play-state: paused;
+        }
+
+        @keyframes slideRight {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100vw);
+            }
         }
     }
 }
