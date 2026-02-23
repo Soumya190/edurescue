@@ -139,6 +139,7 @@
             flex-shrink: 0;
             display: grid;
             gap: 1vw;
+            height: 35vw;
             border: 1px solid black;
             border-radius: 0.5vw;
             padding-bottom: 2vw;
@@ -152,7 +153,7 @@
             }
 
             .newsImages {
-                height: 15vw;
+                height: full;
                 border-top-left-radius: 0.5vw;
                 border-top-right-radius: 0.5vw;
                 margin: 0;
@@ -175,4 +176,34 @@
             }
         }
     }
+
+    .coursesSection{
+        height: 30vw;
+        background-color: #F0F4F8;
+        padding: 2vw;
+
+        .heading{
+            text-align: center;
+        }
+
+        .courseContainer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap:2vw;
+            height: 20vw;
+            width: full;
+
+            .courses{
+                height: 10vw;
+                width: full;
+                border-radius: 0.5vw;
+                padding: 3vw;
+                background-color: white;
+
+
+            }
+        }
+    }
+    
 }
