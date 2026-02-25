@@ -1,6 +1,15 @@
 "use client";
 import React, { useEffect, useState } from 'react';
 import Styles from '@/Styles/HomePage/homepage.module.scss'
+// import * as React from "react"
+import { Card, CardContent } from "@/components/ui/Card"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/Carousel"
 
 
 const Login = () => {
@@ -23,18 +32,18 @@ const Login = () => {
     },
   ];
 
-  const courses=[
+  const courses = [
     {
-      h1:"EarthQuake",
-      p:"Course on EarthQuake"
+      h1: "EarthQuake",
+      p: "Course on EarthQuake"
     },
     {
-      h1:"Tsunami",
-      p:"Course on Tsunami"
+      h1: "Tsunami",
+      p: "Course on Tsunami"
     },
     {
-      h1:"Flood",
-      p:"Course on Flood"
+      h1: "Flood",
+      p: "Course on Flood"
     },
     // {
     //   h1:"Fire",
@@ -110,21 +119,37 @@ const Login = () => {
 
         </div>
 
-        <div className={Styles.coursesSection}>
+        {/* <div className={Styles.coursesSection}>
           <h1 className='heading'>Courses we offer</h1>
-            <div className={Styles.courseContainer}>
-              {/* <div className={Styles.courses}> */}
-                {courses.map((el,idx)=>{
-                  return(
-                    <div key={idx} className={Styles.courses}>
-                      <h2>{el.h1}</h2>
-                      <p>{el.p}</p>
-                    </div>
-                  )
-                })}
-              {/* </div> */}
-            </div>
+          <div className={Styles.courseContainer}>
+            {courses.map((el, idx) => {
+              return (
+                <div key={idx} className={Styles.courses}>
+                  <h2>{el.h1}</h2>
+                  <p>{el.p}</p>
+                </div>
+              )
+            })}
           </div>
+        </div> */}
+
+        <Carousel className="w-full max-w-[12rem] sm:max-w-xs">
+          <CarouselContent>
+            {Array.from({ length: 5 }).map((_, index) => (
+              <CarouselItem key={index}>
+                <div className="p-1">
+                  <Card>
+                    <CardContent className="flex aspect-square items-center justify-center p-6">
+                      <span className="text-4xl font-semibold">{index + 1}</span>
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </div>
     </>
   )
